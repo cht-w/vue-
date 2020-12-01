@@ -343,6 +343,36 @@ npm run build --report
 					...mapGetter(['showNum'])
 				}
 				
+6. axios安装使用。    
+
 				
+				1. 运行命令： cnpm i axios --save
+				2. 在入口文件mian.js 中：按找顺序导入
+
+7. Element-UI安装使用。
+
+			    1. 运行命令：cnpm i element-ui -S 
+				2. 在入口文件main.js中引入 即可  
+					import ElementUI from 'element-ui';
+
+					import 'element-ui/lib/theme-chalk/index.css';
+
+					Vue.use(ElementUI);
 			
+				测试： 在页面中使用：<el-button type="primary">测试</el-button>
+
+
+
+8. 支持markdown  
+
+				1. 运行命令: cnpm install mavon-editor --save
+				2. 在入口文件中导入 
+
+					import mavonEditor from 'mavon-editor'
+
+					import 'mavon-editor/dist/css/index.css'
+
+					Vue.use(mavonEditor)
 				
+
+				参考网址：https://github.com/hinesboy/mavonEditor/blob/master/README.md

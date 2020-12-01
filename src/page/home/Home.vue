@@ -1,23 +1,30 @@
 <template>
-  <div>
-    <AddCount></AddCount>
-    <p>===========================</p>
-    <DeCount></DeCount>
-  </div>
+    <div>
+        <Header></Header>
+        <div class='wrapper'>   
+            <div class="sideBar">
+                <SideBar></SideBar>
+            </div>
+            <div class='main'>
+                <router-view></router-view>
+            </div>
+        </div>
+    </div>
 </template>
 <script>
-  import AddCount from './../.././components/addCount'
-  import DeCount from '../../components/deCount'
-  export default  {
-    components:{ AddCount  , DeCount},
-    data() {
-      return {}
-    },
-    created() {
-    }
-
-  }
+import Header from '../../components/layout/header'
+import SideBar from '../../components/layout/sideBar'
+export default {
+    components:{Header , SideBar}
+}
 </script>
-<style>
-
+<style scoped>
+    .wrapper {
+        display: flex;
+        margin-top: 10px;
+    }
+    .main {
+        width: 100%;
+        padding: 0 20px 20px 20px;
+    }
 </style>

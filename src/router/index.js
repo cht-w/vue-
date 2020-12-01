@@ -5,10 +5,27 @@ Vue.use(Router)
 const route = new Router({
   routes:[
     {
-      path: '/',
-      name: 'Home',
-      component: resolve => require(['@/page/home/Home'] , resolve)
-    }
+      path:'/',
+      name:'home',
+      component:resolve => require(['@/page/home/home'],resolve),
+      children:[
+        {
+          path: '/vuex',
+          name: 'vuex',
+          component: resolve => require(['@/page/vuex/vuex'] , resolve)
+        },
+        {
+          path:'/mobanyufa',
+          name:'mobanyufa',
+          component:resolve=> require(['@/page/mobanyufa/mobanyufa'] , resolve)
+        },
+        {
+          path:'/axios',
+          name:'axios',
+          component:resolve => require(['@/page/axios/axios'], resolve)
+        }
+      ]
+    },
   ]
 })
 export default route;
