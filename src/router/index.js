@@ -23,6 +23,34 @@ const route = new Router({
           path:'/axios',
           name:'axios',
           component:resolve => require(['@/page/axios/axios'], resolve)
+        },
+        {
+          path:'/api',
+          name:'api',
+          component:resolve => require(['@/page/api/api'], resolve)
+        },
+        {
+          path:'/attrs',
+          name:'attrs',
+          component:resolve => require(['@/page/attrs/father'], resolve)
+        },
+        {
+          path:'/params',
+          name:'params',
+          component:resolve => require(['@/page/params/params'], resolve)
+        },
+        {
+          path:'/par/:userId',
+          name:'par',
+          component:resolve => require(['@/page/params/par'], resolve)
+        },
+        {
+          path:'/go2',
+          component:resolve => require(['@/page/params/go2'], resolve)
+        },
+        {
+          path:'/go3',
+          component:resolve => require(['@/page/params/go3'], resolve)
         }
       ]
     },
