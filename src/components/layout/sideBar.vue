@@ -61,7 +61,8 @@ export default {
                   route:'params'
                 },
                 {
-                  name:'2-3'
+                  name:'axios',
+                  route:'axios'
                 },
                   {
                   name:'2-1',

@@ -51,6 +51,10 @@ const route = new Router({
         {
           path:'/go3',
           component:resolve => require(['@/page/params/go3'], resolve)
+        },
+        {
+          path:'/go4',
+          component:resolve => require(['@/page/params/go4'], resolve)
         }
       ]
     },

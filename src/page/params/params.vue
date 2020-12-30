@@ -3,11 +3,27 @@
         <el-button type='primary' @click='go1'>跳转1</el-button>
         <el-button type='primary' @click='go2'>跳转2</el-button>
         <router-link  :to="{path:'/go3', query:{userId:456,job:'It'}}">go3</router-link>
+        <el-button type='primary' @click="clickhandle">点击测试</el-button>
     </div>
 </template>
 <script>
 export default {
+    data() {
+        return {
+            userInfo:[
+                {id:1 , name:'cht'},
+                {id:2 , name:'hw'}
+            ]
+        }
+    },
+
     methods:{
+        clickhandle() {
+            this.userInfo = {
+                ...this.userInfo
+            }
+            console.log(this.userInfo)
+        },
         go1() {
             
             //用这种方法传参，必须这么些，不能写path,否则你在取参数的时候this.$router.params.userId就是undefined.这是因为，params只能用name来引入路由，
