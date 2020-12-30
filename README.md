@@ -348,6 +348,13 @@ npm run build --report
 				
 				1. 运行命令： cnpm i axios --save
 				2. 在入口文件mian.js 中：按找顺序导入
+        
+        新建：http文件夹，及api文件夹。
+        
+        http中  config.js=> 环境配置   request.js=> axios封装   errorCode=> 错误响应。
+        api中  存放接口方法。
+        关于请求消息的提示： 使用element-ui自带的消息组件。
+        import {Notification , MessageBox , Message} from 'element-ui'
 
 7. Element-UI安装使用。
 
